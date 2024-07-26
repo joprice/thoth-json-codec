@@ -1,8 +1,4 @@
-﻿#if FABLE_COMPILER
-namespace Thoth.Json.Codec
-#else
-namespace Thoth.Json.Net.Codec
-#endif
+﻿namespace Thoth.Json.Codec
 
 open System
 

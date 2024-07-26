@@ -1,13 +1,12 @@
 module Thoth.Json.Codec.Tests.Auto
 
+open Thoth.Json.Core
+open Thoth.Json.Codec
+
 #if FABLE_COMPILER
 open Fable.Mocha
-open Thoth.Json
-open Thoth.Json.Codec
 #else
 open Expecto
-open Thoth.Json.Net
-open Thoth.Json.Net.Codec
 #endif
 
 open Thoth.Json.Codec.Tests.Utils
