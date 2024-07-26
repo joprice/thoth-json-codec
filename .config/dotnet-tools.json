@@ -6,13 +6,22 @@
       "version": "7.1.5",
       "commands": [
         "paket"
-      ]
+      ],
+      "rollForward": false
     },
     "fable": {
       "version": "3.7.11",
       "commands": [
         "fable"
-      ]
+      ],
+      "rollForward": false
+    },
+    "fantomas": {
+      "version": "6.3.10",
+      "commands": [
+        "fantomas"
+      ],
+      "rollForward": false
     }
   }
 }
