@@ -31,7 +31,7 @@ module VariantCodecBuilder =
 
         let complete
             (variantEncoding: VariantEncoding)
-            (f: 't -> ('v -> VariantEncoding -> JsonValue))
+            (f: 't -> ('v -> VariantEncoding -> IEncodable))
             (x: VariantCase<'t, 'v>)
             : Codec<'v> =
             let decodeForTag tag fieldName : Decoder<_> =
@@ -75,7 +75,7 @@ module VariantCodecBuilder =
             (tag: string)
             (caseConstructor: 't -> 'v)
             (caseCodec: Codec<'t>)
-            : VariantCase<'t -> VariantEncoding -> JsonValue, 'v> =
+            : VariantCase<'t -> VariantEncoding -> IEncodable, 'v> =
             { Value =
                 fun t ->
                     function

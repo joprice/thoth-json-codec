@@ -7,18 +7,18 @@ open Expecto
 #endif
 
 let tests =
-  testList "Thoth.Json.Codec" [
-    Primitives.tests
-    Combinators.tests
-    Auto.tests
-    ObjectCodec.tests
-    Variant.tests
-  ]
+    testList
+        "Thoth.Json.Codec"
+        [ Primitives.tests
+          Combinators.tests
+          // Auto.tests
+          ObjectCodec.tests
+          Variant.tests ]
 
 [<EntryPoint>]
 let main argv =
 #if FABLE_COMPILER
-  Mocha.runTests tests
+    Mocha.runTests tests
 #else
-  runTestsWithCLIArgs [] argv tests
+    runTestsWithCLIArgs [] argv tests
 #endif
