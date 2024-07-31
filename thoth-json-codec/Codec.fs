@@ -55,11 +55,13 @@ module CodecRequireQualifiedAccess =
 
         let unit: Codec<unit> = create Encode.unit Decode.unit
 
+#if !FABLE_COMPILER_PYTHON
         let datetimeOffset: Codec<DateTimeOffset> =
             create Encode.datetimeOffset Decode.datetimeOffset
 
         let datetimeAsIs: Codec<DateTime> =
             create Encode.datetime (Decode.datetimeOffset |> Decode.map (fun dto -> dto.DateTime))
+#endif
 
         let bigint: Codec<bigint> = create Encode.bigint Decode.bigint
 
