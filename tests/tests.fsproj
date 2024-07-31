@@ -15,7 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\thoth-json-net-codec\thoth-json-net-codec.fsproj" />
-    <ProjectReference Include="..\thoth-json-codec\thoth-json-codec.fsproj" />
+    <ProjectReference Include="..\Thoth.Json.Codec\thoth-json-codec.fsproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="paket.references" />
